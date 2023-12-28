@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    padding: 3px 10px;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+}
+
+.logo .img{
+    justify-content: center;
+    display: flex;
+    width: 15rem;
+}
+
+.banner{
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    background: url(img/log.png) no-repeat;
+    background-size: cover;
+    filter: brightness(20%);
+}
+
+.video{
+    position: absolute;
+    right: 0;
+    z-index: -1000;
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    font-size: 2rem;
+}
+
+a:hover{
+    color: rgb(174, 0, 255);
+}
+
+#ul{
+    display: flex;
+    margin-top: 60px;
+}
+
+#li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.main{
+    padding: 164px 0 100px;
+    min-height: calc(min(100vh - var(--topbar-height), 54.58vw));
+    height: 91vh;
+}
+
+.texto1{
+    align-items: center;
+    text-align: inherit;
+    margin: 0 auto;
+    margin-left: 10%;
+}
+
+.main h1 {
+    margin-bottom: 20px;
+    line-height: 1.196428571428571;
+    font-weight: 800;
+    font-size: 56px;
+    color: #fff;
+    display: inherit;
+}
+
+.main .subtitle {
+    margin: 0 0 25px;
+    line-height: 1.25;
+    text-align: inherit;
+    font-size: 20px;
+    color: #f4e835;
+    display: inline-block;
+}
+
+/* cards */
+.cont-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.cont1{
+    background: #000000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: -1;
+    height: 100vh;
+}
+
+.cont1 .card{
+    position: relative;
+    width: 280px;
+    aspect-ratio: 4/4;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    background: rgba(162, 58, 231, 0.781);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.5s;
+}
+
+.cont1 .card:hover{
+    border-radius: 15px;
+    position: relative;
+    width: 280px;
+    aspect-ratio: 3/4;
+    background: rgb(108, 4, 134);
+}
+
+.cont1 .card .content{
+    padding: 50px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.cont1 .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.cont1 .card .content h2{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    font-size: 8em;
+    color: rgba(49, 47, 47, 0.3);
+    pointer-events: none;
+}
+
+.cont1 .card .content h3{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.cont1 .card .content p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.cont1 .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #fff;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* icon */
+.icone{
+    position: fixed; 
+    width: 100%; 
+    aspect-ratio: 3/4;
+}
+
+.icone1{
+    position: fixed;  
+    width: 80%; 
+    aspect-ratio: 3/3;
+}
+
+.icone2{
+    position: fixed;
+    width: 100%; 
+    aspect-ratio: 3/2;
+}
+
+.icone3{
+    position: fixed;  
+    width: 60%; 
+    aspect-ratio: 3/3;
+}
+
+.card:hover .icone1{
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.card:hover .icone{
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.card:hover .icone2{
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.card:hover .icone3{
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+/* letreiro */
+.letreiro {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 40px;
+    font-weight: 900;
+    position: relative;
+    width: 99vw;
+    background: #fff;
+}
+
+.texto {
+    animation: percorrer 4s infinite linear;
+    display: inline-block;
+    padding: 7px;
+    background: url(../img/estrela.svg) no-repeat calc(100% - 15px) 50%/40px;
+    padding-right: 20%;
+    padding-left: 0px;
+}
+
+@keyframes percorrer {
+    0% { 
+        transform: translateX(0.5em); 
+    }
+
+    5%{
+        transform: translateX(-5%);
+    }
+
+    10% { 
+        transform: translateX(-10%); 
+    }
+
+    20% { 
+        transform: translateX(-20%); 
+    }
+
+    30% { 
+        transform: translateX(-30%); 
+    }
+
+    40% {
+        transform: translateX(-40%); 
+    }
+
+    50% {
+        transform: translateX(-50%); 
+    }
+
+    60% {
+        transform: translateX(-60%); 
+    }
+
+    70% {
+        transform: translateX(-70%); 
+    }
+
+    80% {
+        transform: translateX(-80%); 
+    }
+
+    90% {
+        transform: translateX(-90%); 
+    }
+
+    100% { 
+        transform: translateX(-100%) ; 
+    }
+}
+
+/* Texto animado */
+.cont{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.cont .estatico{
+    margin-right: 1vh;
+    color:rgb(129 125 125);
+    font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.cont .dinamico{
+    margin-left: 0;
+    height: 90px;
+    overflow: hidden;
+}
+
+.dinamico li{
+    color: rgb(164, 11, 202);
+    list-style: none;
+    font-size: 60px;
+    font-weight: 600;
+    left: 0;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -380px;
+    }
+}
+
+.dinamico li span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid rgb(164, 11, 202);
+    animation: typing 1.5s steps(20) infinite;
+    background: #000000;
+}
+
+.dinamico li span{
+    position: relative;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+/* POPUP */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+
+#popup {
+    color: #fff;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0; 
+    border: none; 
+    z-index: 2;
+    text-align: center;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* Estilos para a imagem dentro do pop-up */
+.imagem-popup { 
+    width: 100%;
+    height: auto; 
+}
+
+
+#fechar {
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+#fechar-final {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+@media(max-width:999px){
+    .main h1 {
+        font-size: 30px;
+    }
+    
+    .main .subtitle {
+        font-size: 15px;
+    }
+
+    .letreiro {
+        font-size: 20px;
+        
+    }
+    
+    .texto {
+        background: url(../img/estrela.svg) no-repeat calc(100% - 30px) 50%/20px;
+    }
+
+    .video{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 155vh;
+        z-index: -1000;
+        background-size: cover;
+        filter: brightness(100%);
+    }
+
+    .cont .estatico{
+        font-size: 30px;
+        margin-top: 10px;
+    }    
+
+    .dinamico li{
+        font-size: 30px;
+        animation: slide 6s steps(4) infinite;
+    }
+
+    .cont .dinamico{
+        margin-left: 0;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    @keyframes slide{
+        100%{
+            top: -210px;
+        }
+    }  
+    
+    @keyframes typing{
+        100%{
+            left: 100%;
+            margin: 0 -35px 0 10px;
+        }
+    }
+
+    .cont1{
+        height: 15vh; 
+    }
+
+    .cont-card{
+        display: none;
+    }
+
+    .imagem-popup {
+        width: 35rem; 
+        height: auto; 
+    }
+
+}

@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.box{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+legend{
+  border: 1px solid dodgerblue;
+  padding: 10px;
+  text-align: center;
+  background-color: dodgerblue;
+  border-radius: 8px;
+}
+
+.inputBox{
+  position: relative;
+}
+
+option{
+  background-color: rgb(59, 59, 59);
+}
+
+.inputUser{
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.labelInput{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+  top: -20px;
+  font-size: 12px;
+  color: dodgerblue;
+}
+
+#data_nascimento{
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.submit{
+  background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.submit:hover{
+  background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+}
+
+
+/* modal */
+#open-modal {
+  background-color: #007bff;
+}
+
+.bn{
+  background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+  width: 20%;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.bn:hover {
+  background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background-color: #000000;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+  animation: fadeIn 0.8s; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#fade,
+#modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 0.2rem;
+}
+
+.modal-body{
+  padding: 2rem;
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide {
+  top: 0;
+}
+
+.open-modal{
+  cursor: pointer;
+}
+
+.sc{
+  background: #000;
+}
+
+.btn, .section-forms .rd-button {
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 25px;
+  background: #cc00ff;
+  display: inline-block;
+  text-transform: uppercase;
+  min-width: auto;
+  width: auto;
+  height: auto;
+}
+
+.container2 {
+  /* Estilos do elemento com a classe "container2" */
+  /* Certifique-se de que este seletor corresponde ao elemento que você deseja destacar */
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* Estilo para os elementos com a classe .container2 */
+.container2 { 
+  /*Adicione a transição para suavizar a mudança de escala */
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+/* Adicione o efeito de aumento e deslocamento no hover */
+.container2:hover {
+  -webkit-transform: scale(1) translateY(-5px); /* Aumenta o tamanho em 10% e move 20px para cima quando o mouse passa sobre o elemento com a classe "container2" */
+  -moz-transform: scale(1) translateY(-5px);
+  box-shadow: 0px 0px 10px #df12d9;
+}
+
+
+
+.button-excel,
+.button-canva,
+.button-windows,
+.button-nuvem {
+  display: block;
+  margin: 23px auto;
+  padding: 16px 30px;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.btn, .section-excel, .section-windows, .section-canva, .section-nuvem .rd-button {
+  background: #a200ff;
+  font-size: 18px;
+  box-shadow: 1px 1px 20px rgb(84, 13, 124);
+}
+
+
+
+.container2 {
+  max-width: 90vh;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #370346;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 20px black;
+  margin-bottom: 15px;
+}
+
+
+.excel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.h1 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+
+.h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.container2 p {
+  color: white;
+}
+
+.container2 li {
+  color: white;
+}
+
+.container2 h1, h2 {
+  color: white;
+  font-size: 5vh;
+}
+
+
+/* Estilo para os itens da lista */
+li {
+  font-size: 18px;
+  color: #555;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  
+}
+
+
+.btn:hover {
+  color: #fff;
+  background-color: #670ad1;
+}
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+      font-size: 28px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  li {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  h1 {
+      font-size: 24px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  li {
+      font-size: 9px;
+  }
+
+  .btn, .button-excel {
+      font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+      font-size: 20px;
+  }
+
+  h2 {
+      font-size: 16px;
+  }
+
+  li {
+      font-size: 7px;
+  }
+
+  .btn, .button-excel {
+      font-size: 14px;
+  }
+}
+
+@media(max-width:999px){
+  .inputUser{
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .bn{
+    width: 30%;
+  }
+
+  .modal-body {
+    padding: 0rem;
+}
+}

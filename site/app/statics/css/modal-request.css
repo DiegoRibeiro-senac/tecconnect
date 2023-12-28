@@ -1,0 +1,65 @@
+html {
+    user-select: none;
+}
+
+.text-ok {
+    box-shadow: 0 5px 10px rgba(7, 253, 23, 0.5);
+}
+
+.text-error {
+    box-shadow: 0 5px 10px red;
+}
+
+.modal {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-dialog {
+    color: white;
+    border: 1px solid rebeccapurple;
+    border-radius: 1rem;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: transparent;
+}
+
+#inscrito_request_status {
+    font-size: large;
+}
+
+.modal button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    transition: all .2s ease;
+    background-color: rgb(0, 0, 0);
+    color: lightgray;
+    border: 1px solid rebeccapurple;
+}
+
+
+@media (max-width: 400px) {
+
+    .modal-dialog {
+        width: 95vw;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    .modal button {
+        margin-top: 1rem;
+        padding: .5rem 1rem;
+    }
+}
